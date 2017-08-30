@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="git," />
 
 
 
@@ -94,16 +94,23 @@
 
 
 
-<meta name="description" content="世祖四年生于雁门郡">
-<meta property="og:type" content="website">
-<meta property="og:title" content="结 绊">
-<meta property="og:url" content="https://yxk2012.github.io/archives/index.html">
+<meta name="description" content="brach 基础 Git所提交的对象(commit object)，包含一个指向暂存内容快照的指针，还有作者的姓名和邮箱，提交时输入的信息以及指向它父对象的指针。首次提交产生的提交对象没有父对象，普通提交操作产生的提交对象有一个父对象，多个分支合并产生的提交对象有多个父对象。当使用 git commit 进行提交操作时，Git 会先计算每一个子目录（本例中只有项目根目录）的校验和，然后在 Git">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git and branch">
+<meta property="og:url" content="https://yxk2012.github.io/2017/08/29/git-and-branch/index.html">
 <meta property="og:site_name" content="结 绊">
-<meta property="og:description" content="世祖四年生于雁门郡">
+<meta property="og:description" content="brach 基础 Git所提交的对象(commit object)，包含一个指向暂存内容快照的指针，还有作者的姓名和邮箱，提交时输入的信息以及指向它父对象的指针。首次提交产生的提交对象没有父对象，普通提交操作产生的提交对象有一个父对象，多个分支合并产生的提交对象有多个父对象。当使用 git commit 进行提交操作时，Git 会先计算每一个子目录（本例中只有项目根目录）的校验和，然后在 Git">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://i.imgur.com/eKXvXFp.jpg">
+<meta property="og:image" content="https://git-scm.com/book/en/v2/images/commits-and-parents.png">
+<meta property="og:image" content="https://git-scm.com/book/en/v2/images/branch-and-history.png">
+<meta property="og:image" content="https://git-scm.com/book/en/v2/images/head-to-master.png">
+<meta property="og:updated_time" content="2017-08-30T14:17:02.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="结 绊">
-<meta name="twitter:description" content="世祖四年生于雁门郡">
+<meta name="twitter:title" content="git and branch">
+<meta name="twitter:description" content="brach 基础 Git所提交的对象(commit object)，包含一个指向暂存内容快照的指针，还有作者的姓名和邮箱，提交时输入的信息以及指向它父对象的指针。首次提交产生的提交对象没有父对象，普通提交操作产生的提交对象有一个父对象，多个分支合并产生的提交对象有多个父对象。当使用 git commit 进行提交操作时，Git 会先计算每一个子目录（本例中只有项目根目录）的校验和，然后在 Git">
+<meta name="twitter:image" content="http://i.imgur.com/eKXvXFp.jpg">
 
 
 
@@ -132,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://yxk2012.github.io/archives/"/>
+  <link rel="canonical" href="https://yxk2012.github.io/2017/08/29/git-and-branch/"/>
 
 
 
 
 
-  <title>归档 | 结 绊</title>
+  <title>git and branch | 结 绊</title>
   
 
 
@@ -166,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -284,333 +291,173 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yxk2012.github.io/2017/08/29/git-and-branch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Morgan Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="结 绊">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">git and branch</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-29T20:44:40+08:00">
+                2017-08-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 8 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/30/git-and-branch-2/" itemprop="url">
-              
-                <span itemprop="name">git and branch 二</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-30T19:46:17+08:00"
-              content="2017-08-30" >
-          08-30
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/29/git-and-branch/" itemprop="url">
-              
-                <span itemprop="name">git and branch</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-29T20:44:40+08:00"
-              content="2017-08-29" >
-          08-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/28/git-and-based/" itemprop="url">
-              
-                <span itemprop="name">git and based</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-28T19:34:30+08:00"
-              content="2017-08-28" >
-          08-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p><img src="http://i.imgur.com/eKXvXFp.jpg" alt="brachhere"></p>
+<h2 id="brach-基础"><a href="#brach-基础" class="headerlink" title="brach 基础"></a>brach 基础</h2><ul>
+<li>Git所提交的对象(commit object)，包含一个指向暂存内容快照的指针，还有作者的姓名和邮箱，提交时输入的信息以及指向它父对象的指针。首次提交产生的提交对象没有父对象，普通提交操作产生的提交对象有一个父对象，多个分支合并产生的提交对象有多个父对象。当使用 git commit 进行提交操作时，Git 会先计算每一个子目录（本例中只有项目根目录）的校验和，然后在 Git 仓库中这些校验和保存为树对象。 随后，Git 便会创建一个提交对象，它除了包含上面提到的那些信息外，还包含指向这个树对象（项目根目录）的指针。<br>修改后再次提交：<br><img src="https://git-scm.com/book/en/v2/images/commits-and-parents.png" alt="commit-and-parents"><a id="more"></a> 
+</li>
+</ul>
+<blockquote>
+<p>Git 的分支，其实本质上仅仅是指向提交对象的可变指针。 Git 的默认分支名字是 master。 在多次提交操作之后，你其实已经有一个指向最后那个提交对象的 master 分支。 它会在每次的提交操作中自动向前移动。</p>
+</blockquote>
+<p><img src="https://git-scm.com/book/en/v2/images/branch-and-history.png" alt="branch-and-history"></p>
+<h2 id="分支创建"><a href="#分支创建" class="headerlink" title="分支创建"></a>分支创建</h2><ul>
+<li><p><code>git branch [branchname]</code> 创建一个新的分支，这会在当前所提交对象上创建一个指针。<br>Git通过<code>HEAD</code>的特殊指针， 来指示它当前在哪一个分支。上面命令执行后，<code>HEAD</code>指针所在位置如图：<br><img src="https://git-scm.com/book/en/v2/images/head-to-master.png" alt="head-to-master">  </p>
+</li>
+<li><p><code>git log --oneline --decorate</code> 可以快捷查看各个分支当前所指对象。  </p>
+</li>
+</ul>
+<h2 id="分支切换"><a href="#分支切换" class="headerlink" title="分支切换"></a>分支切换</h2><ul>
+<li><code>git checkout [branchname]</code> 用来切换到一个已经存在的分支。（将<code>HEAD</code>指向另一个分支）  </li>
+<li>在执行<code>commit</code>后，<code>HEAD</code>所在分支会向前移动。</li>
+<li>当执行<code>git checkout master</code>后，<code>HEAD</code>会指回<code>master</code>分支，并且工作目录会恢复成<code>master</code>分支所指向的快照内容。  </li>
+<li>两次改动针对不同的分支时，项目会产生分叉，可以在不同的分支间不断来回切换和工作，并在适当时合并。</li>
+<li><code>git log --oneline --decorate --graph --all</code> 可以显示提交历史，各分支的指向以及项目的分支分叉情况。  </li>
+</ul>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1]Chacon S, Straub B. Pro git[M]. Apress, 2014. </p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/28/Jupyter-Notebook笔记/" itemprop="url">
-              
-                <span itemprop="name">Jupyter Notebook笔记</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-28T09:41:30+08:00"
-              content="2017-08-28" >
-          08-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/27/hexo博客多机更新实战/" itemprop="url">
-              
-                <span itemprop="name">hexo博客多机更新实战</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-27T20:08:45+08:00"
-              content="2017-08-27" >
-          08-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/27/markdown与sublime-text-3/" itemprop="url">
-              
-                <span itemprop="name">markdown与sublime text 3</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-27T14:52:09+08:00"
-              content="2017-08-27" >
-          08-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/21/关于拉格朗日插值法/" itemprop="url">
-              
-                <span itemprop="name">关于拉格朗日插值法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-21T00:20:40+08:00"
-              content="2017-08-21" >
-          08-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/20/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-20T00:20:40+08:00"
-              content="2017-08-20" >
-          08-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/28/git-and-based/" rel="next" title="git and based">
+                <i class="fa fa-chevron-left"></i> git and based
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/30/git-and-branch-2/" rel="prev" title="git and branch 二">
+                git and branch 二 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -618,6 +465,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -638,8 +489,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -716,6 +576,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#brach-基础"><span class="nav-number">1.</span> <span class="nav-text">brach 基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支创建"><span class="nav-number">2.</span> <span class="nav-text">分支创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支切换"><span class="nav-number">3.</span> <span class="nav-text">分支切换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -846,11 +722,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   

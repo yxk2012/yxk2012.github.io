@@ -300,6 +300,772 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yxk2012.github.io/2017/08/30/git-and-branch-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Morgan Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="结 绊">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/30/git-and-branch-2/" itemprop="url">git and branch 二</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-30T19:46:17+08:00">
+                2017-08-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://i.imgur.com/sDIkG8L.jpg" alt="branch2"></p>
+<h2 id="分支的新建与合并"><a href="#分支的新建与合并" class="headerlink" title="分支的新建与合并"></a>分支的新建与合并</h2><ul>
+<li><code>git checkout -b [branchname]</code> 新建一分支的同时切换到那个分支。  </li>
+<li><code>git merge [branchname]</code> 合并分支，当<code>HEAD</code>在要合并的分支上游的分支时，Git 会采用Fast-forward，来简单的将指针向前推进，这种情况下没有需要解决的分歧，叫做”快进” 。  </li>
+<li><code>git branch -d [branchname]</code> 可以将不需要的分支删除，如合并后不再需要的分支。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/30/git-and-branch-2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yxk2012.github.io/2017/08/29/git-and-branch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Morgan Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="结 绊">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/29/git-and-branch/" itemprop="url">git and branch</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-29T20:44:40+08:00">
+                2017-08-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="http://i.imgur.com/eKXvXFp.jpg" alt="brachhere"></p>
+<h2 id="brach-基础"><a href="#brach-基础" class="headerlink" title="brach 基础"></a>brach 基础</h2><ul>
+<li>Git所提交的对象(commit object)，包含一个指向暂存内容快照的指针，还有作者的姓名和邮箱，提交时输入的信息以及指向它父对象的指针。首次提交产生的提交对象没有父对象，普通提交操作产生的提交对象有一个父对象，多个分支合并产生的提交对象有多个父对象。当使用 git commit 进行提交操作时，Git 会先计算每一个子目录（本例中只有项目根目录）的校验和，然后在 Git 仓库中这些校验和保存为树对象。 随后，Git 便会创建一个提交对象，它除了包含上面提到的那些信息外，还包含指向这个树对象（项目根目录）的指针。<br>修改后再次提交：<br><img src="https://git-scm.com/book/en/v2/images/commits-and-parents.png" alt="commit-and-parents">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/29/git-and-branch/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yxk2012.github.io/2017/08/28/git-and-based/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Morgan Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="结 绊">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/28/git-and-based/" itemprop="url">git and based</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T19:34:30+08:00">
+                2017-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="http://i.imgur.com/VxiaIEu.jpg" alt="祝天下有情人终成眷属"></p>
+<h2 id="Git-Before"><a href="#Git-Before" class="headerlink" title="Git Before"></a>Git Before</h2><ul>
+<li>git 有三种状态，分别为已提交（committed）、已修改（modified）和已暂存（staged）。</li>
+</ul>
+<blockquote>
+<p>已提交表示数据已经安全的保存在本地数据库中。 已修改表示修改了文件，但还没保存到数据库中。 已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。 </p>
+</blockquote>
+<ul>
+<li>初次运行git前配置用户信息。每一个git提交都会使用。<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git config --global user.name <span class="string">"John Doe"</span></span></div><div class="line"><span class="meta">$</span><span class="bash"> git config --global user.email johndoe@example.com</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>&emsp;&emsp;<strong>Tips:</strong>–global 选项写入<code>~/.gitconfig</code> 或 <code>~/.config/git/config</code> 文件，如不加–global，在git仓库中运行时，会写入仓库中的config文件，即为<code>.git/config</code>，后面的内容会覆盖前面的内容。<br>&emsp;&emsp;<code>git config --list</code>会检查git配置信息<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/28/git-and-based/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yxk2012.github.io/2017/08/28/Jupyter-Notebook笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Morgan Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="结 绊">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/28/Jupyter-Notebook笔记/" itemprop="url">Jupyter Notebook笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T09:41:30+08:00">
+                2017-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="http://i.imgur.com/ci93fxo.jpg" alt="Imgur"></p>
+<h2 id="notebook-基本操作"><a href="#notebook-基本操作" class="headerlink" title="notebook 基本操作"></a>notebook 基本操作</h2><ul>
+<li>在shell下键入<code>jupyter notebook</code>，启动notebook本地server。<br>&emsp;&emsp;<strong>Tips:</strong>shell 的当前路径会作为notebook中python语句的执行路径，建议选在自己的workspace，以缩短相对路径。  </li>
+<li><kbd>ctrl</kbd>+<kbd>enter</kbd> run cell 执行当前格。<br><kbd>shift</kbd>+<kbd>enter</kbd> run cell,select next  执行当前格并选中下一格。<br><kbd>alt</kbd>+<kbd>enter</kbd> run cell, insert below  执行当前格，并在下插入一格。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/28/Jupyter-Notebook笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yxk2012.github.io/2017/08/27/hexo博客多机更新实战/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Morgan Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="结 绊">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/27/hexo博客多机更新实战/" itemprop="url">hexo博客多机更新实战</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-27T20:08:45+08:00">
+                2017-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://i.imgur.com/mXM5C5d.jpg" alt="imgur"></p>
+<h2 id="将A计算机上的博客部署到git"><a href="#将A计算机上的博客部署到git" class="headerlink" title="将A计算机上的博客部署到git"></a>将A计算机上的博客部署到git</h2><p>一、 注册oschina账号，在其gitee上建立一个新的私有repo。<br>二、 在A计算机，已经部署好的hexo博客根目录下删除原有的.git文件夹，包括子目录下的.git文件夹也一并删除。<br>三、 修改hexo博客根目录下本已存在的.gitignore文件，在其中加入如下内容。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/.deploy_git</div><div class="line">/public  </div><div class="line">/_config.yml</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;其中<code>_config.yml</code>可以加入也可以不加入，此处考虑安全原因，建议使用其他方法将该文件同步。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/27/hexo博客多机更新实战/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yxk2012.github.io/2017/08/27/markdown与sublime-text-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Morgan Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="结 绊">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/27/markdown与sublime-text-3/" itemprop="url">markdown与sublime text 3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-27T14:52:09+08:00">
+                2017-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="sublime-markdown-editing-快捷键"><a href="#sublime-markdown-editing-快捷键" class="headerlink" title="sublime markdown editing 快捷键"></a>sublime markdown editing 快捷键</h2><p><kbd>alt</kbd>+<kbd>b</kbd>  <strong>加粗</strong><br><kbd>alt</kbd>+<kbd>i</kbd>  <em>斜体</em><br>再按一次取消<br><kbd>ctrl</kbd>+<kbd>1</kbd> 一号标题<br><kbd>ctrl</kbd>+<kbd>2</kbd> 二号标题<br>…<br><kbd>ctrl</kbd>+<kbd>6</kbd> 六号标题<br><kbd>win</kbd>+<kbd>shift</kbd>+<kbd>k</kbd> 插入图片<br><kbd>win</kbd>+<kbd>shift</kbd>+<kbd>v</kbd> 插入链接<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/27/markdown与sublime-text-3/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://yxk2012.github.io/2017/08/21/关于拉格朗日插值法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -451,7 +1217,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-20T10:33:48+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-20T00:20:40+08:00">
                 2017-08-20
               </time>
             
@@ -581,7 +1347,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -589,6 +1355,15 @@
 
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>

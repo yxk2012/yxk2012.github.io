@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="git," />
 
 
 
@@ -94,16 +94,24 @@
 
 
 
-<meta name="description" content="世祖四年生于雁门郡">
-<meta property="og:type" content="website">
-<meta property="og:title" content="结 绊">
-<meta property="og:url" content="https://yxk2012.github.io/archives/index.html">
+<meta name="description" content="分支的新建与合并 git checkout -b [branchname] 新建一分支的同时切换到那个分支。   git merge [branchname] 合并分支，当HEAD在要合并的分支上游的分支时，Git 会采用Fast-forward，来简单的将指针向前推进，这种情况下没有需要解决的分歧，叫做”快进” 。   git branch -d [branchname] 可以将不需要的分支删">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git and branch 二">
+<meta property="og:url" content="https://yxk2012.github.io/2017/08/30/git-and-branch-2/index.html">
 <meta property="og:site_name" content="结 绊">
-<meta property="og:description" content="世祖四年生于雁门郡">
+<meta property="og:description" content="分支的新建与合并 git checkout -b [branchname] 新建一分支的同时切换到那个分支。   git merge [branchname] 合并分支，当HEAD在要合并的分支上游的分支时，Git 会采用Fast-forward，来简单的将指针向前推进，这种情况下没有需要解决的分歧，叫做”快进” 。   git branch -d [branchname] 可以将不需要的分支删">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/sDIkG8L.jpg">
+<meta property="og:image" content="https://git-scm.com/book/en/v2/images/basic-merging-1.png">
+<meta property="og:image" content="https://git-scm.com/book/en/v2/images/basic-merging-2.png">
+<meta property="og:image" content="https://git-scm.com/book/en/v2/images/remote-branches-1.png">
+<meta property="og:image" content="https://git-scm.com/book/en/v2/images/remote-branches-3.png">
+<meta property="og:updated_time" content="2017-08-30T14:17:02.442Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="结 绊">
-<meta name="twitter:description" content="世祖四年生于雁门郡">
+<meta name="twitter:title" content="git and branch 二">
+<meta name="twitter:description" content="分支的新建与合并 git checkout -b [branchname] 新建一分支的同时切换到那个分支。   git merge [branchname] 合并分支，当HEAD在要合并的分支上游的分支时，Git 会采用Fast-forward，来简单的将指针向前推进，这种情况下没有需要解决的分歧，叫做”快进” 。   git branch -d [branchname] 可以将不需要的分支删">
+<meta name="twitter:image" content="https://i.imgur.com/sDIkG8L.jpg">
 
 
 
@@ -132,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="https://yxk2012.github.io/archives/"/>
+  <link rel="canonical" href="https://yxk2012.github.io/2017/08/30/git-and-branch-2/"/>
 
 
 
 
 
-  <title>归档 | 结 绊</title>
+  <title>git and branch 二 | 结 绊</title>
   
 
 
@@ -166,7 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -284,333 +292,183 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yxk2012.github.io/2017/08/30/git-and-branch-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Morgan Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="结 绊">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">git and branch 二</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-30T19:46:17+08:00">
+                2017-08-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 8 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/30/git-and-branch-2/" itemprop="url">
-              
-                <span itemprop="name">git and branch 二</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-30T19:46:17+08:00"
-              content="2017-08-30" >
-          08-30
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/29/git-and-branch/" itemprop="url">
-              
-                <span itemprop="name">git and branch</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-29T20:44:40+08:00"
-              content="2017-08-29" >
-          08-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/28/git-and-based/" itemprop="url">
-              
-                <span itemprop="name">git and based</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-28T19:34:30+08:00"
-              content="2017-08-28" >
-          08-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p><img src="https://i.imgur.com/sDIkG8L.jpg" alt="branch2"></p>
+<h2 id="分支的新建与合并"><a href="#分支的新建与合并" class="headerlink" title="分支的新建与合并"></a>分支的新建与合并</h2><ul>
+<li><code>git checkout -b [branchname]</code> 新建一分支的同时切换到那个分支。  </li>
+<li><code>git merge [branchname]</code> 合并分支，当<code>HEAD</code>在要合并的分支上游的分支时，Git 会采用Fast-forward，来简单的将指针向前推进，这种情况下没有需要解决的分歧，叫做”快进” 。  </li>
+<li><code>git branch -d [branchname]</code> 可以将不需要的分支删除，如合并后不再需要的分支。 <a id="more"></a></li>
+<li><p>当要合并的分支同当前分支从一个更早的地缝分叉时，Git 会使用两个分支的末端所指的快照（C4 和 C5）以及这两个分支的工作祖先（C2），做一个简单的三方合并，如图所示。<br><img src="https://git-scm.com/book/en/v2/images/basic-merging-1.png" alt="basic-merging-1"></p>
+<p>  Git 将此次三方合并的结果做了一个新的快照并且自动创建一个新的提交指向它。 这个被称作一次合并提交，它的特别之处在于他有不止一个父提交。  </p>
+</li>
+</ul>
+<p><img src="https://git-scm.com/book/en/v2/images/basic-merging-2.png" alt="basic-merging-2"></p>
+<ul>
+<li>如果你在两个不同的分支中，对同一个文件的同一个部分进行了不同的修改，Git 就没法干净的合并它们。使用<code>git status</code> 可以在合并冲突后的任意时刻查看因包含合并冲突而未合并的文件。<br>Git 会在有冲突的文件中加入标准的冲突解决标记，这样你可以打开这些包含冲突的文件然后手动解决冲突。 出现冲突的文件会包含一些特殊区段，如下所示： </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:index.html</div><div class="line">&lt;div id=&quot;footer&quot;&gt;contact : email.support@github.com&lt;/div&gt;</div><div class="line">=======</div><div class="line">&lt;div id=&quot;footer&quot;&gt;</div><div class="line"> please contact us at support@github.com</div><div class="line">&lt;/div&gt;</div><div class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; iss53:index.html</div></pre></td></tr></table></figure>
+<blockquote>
+<p>上半部分区段（======= 的上半部分）即<code>HEAD</code> 所指示的分支（也就是master 分支所在的位置，因为在运行 merge 命令的时候已经checkout到了这个分支），而 iss53 分支所指示的版本在 ======= 的下半部分。 为了解决冲突，可以选择使用由 ======= 分割的两部分中的一个，或者你也可以自行合并这些内容。最后将&lt;&lt;&lt;&lt;&lt;&lt;&lt; , ======= , 和 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 这些行完全删除。对每个文件使用 git add 命令来将其标记为冲突已解决。 一旦暂存这些原本有冲突的文件，Git 就会将它们标记为冲突已解决。 </p>
+</blockquote>
+<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><ul>
+<li><code>git branch</code> 返回当前所有分支别表，加入<code>-v</code>参数会显示详细信息，<code>--merged</code>和<code>--no-merged</code>可以过滤已经合并或还未合并的分支。  </li>
+</ul>
+<h2 id="远程分支"><a href="#远程分支" class="headerlink" title="远程分支"></a>远程分支</h2><ul>
+<li><p>远程跟踪分支时远程分支状态的引用，其以<code>(remote)/(branch)</code>形式命名。<code>clone</code>时，本地会同时存在一个远程分支和一个本地分支。如下图：<br><img src="https://git-scm.com/book/en/v2/images/remote-branches-1.png" alt="remote-branches"></p>
+<p>  在本地做了的改动提交后，本地的<code>master</code>分支会前进，如果不与origin服务器链接，<code>origin/master</code>指针不会发生移动。</p>
+</li>
+<li><p><code>git fetch origin</code>运行该命令后，会从origin服务器抓取本地没有的数据，移动<code>origin/master</code>指针到新的位置如图。<br><img src="https://git-scm.com/book/en/v2/images/remote-branches-3.png" alt="remote-branches-3"></p>
+</li>
+<li><p>本地分支不会自动与远程仓库同步，必须显式的推送，<code>git push (remote) (branch)</code>，这条命令相当于一个<code>git push (remote) (localbranchname):(remotebranchname)</code>的简化，将本地的分支推送为远程仓库同名的分支。可以使用后面复杂的命令来将本地分支推送到一个远程仓库的不同命名的分支。</p>
+</li>
+<li>在一段时间的工作后，执行<code>git fetch origin</code>抓取，在本地生成<code>origin/somebranch</code>的远程分支，这时本地不会有一个新的<code>somebranch</code>分支，只有一个不可修改的<code>origin/somebranch</code>指针。可以运行<code>git merge origin/somebranch</code>将远程分支的工作合并到当前分支，也可以通过<code>git merge origin/somebranch</code>在自己的<code>somebranch</code>分支上工作。</li>
+<li>从一个远程分支<code>checkout</code>的本地分支会自动创建为跟踪分支，其执行<code>git pull</code>时会自动识别到哪个远程服务器抓取，合并。克隆仓库时创建的<code>master</code>分支会自动成为<code>origin/master</code>的跟踪分支。</li>
+<li><code>git checkout -b [branch] [remotename]/[branch]</code> 可以手动创建分支跟踪，该命令简写为<code>git checkout --track [remotename]/[branch]</code>，意为<code>git checkout -b somebranch [remotename]/somebranch</code>为同一branch名。</li>
+<li><code>git branch -u [remote]/[branch]</code> 可以修改所跟踪的上游分支。跟踪分支在设置好后，可以简写，<code>[remotename]/[branch]</code>等价为<code>@{u}</code>。</li>
+<li><code>git branch -vv</code> 可以查看每一个分支与正在跟踪分支的详细情况，要想查看最新的状态，可以在执行该命令前执行<code>git fetch -all</code>。</li>
+<li><code>git pull</code>相当于<code>git fetch</code>+<code>git merge</code>。</li>
+<li><code>git push [remotename] --delete [branch]</code> 可以从远程仓库删除某分支。</li>
+</ul>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1]Chacon S, Straub B. Pro git[M]. Apress, 2014. </p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/28/Jupyter-Notebook笔记/" itemprop="url">
-              
-                <span itemprop="name">Jupyter Notebook笔记</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-28T09:41:30+08:00"
-              content="2017-08-28" >
-          08-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/27/hexo博客多机更新实战/" itemprop="url">
-              
-                <span itemprop="name">hexo博客多机更新实战</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-27T20:08:45+08:00"
-              content="2017-08-27" >
-          08-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/27/markdown与sublime-text-3/" itemprop="url">
-              
-                <span itemprop="name">markdown与sublime text 3</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-27T14:52:09+08:00"
-              content="2017-08-27" >
-          08-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/21/关于拉格朗日插值法/" itemprop="url">
-              
-                <span itemprop="name">关于拉格朗日插值法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-21T00:20:40+08:00"
-              content="2017-08-21" >
-          08-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/20/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-20T00:20:40+08:00"
-              content="2017-08-20" >
-          08-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/29/git-and-branch/" rel="next" title="git and branch">
+                <i class="fa fa-chevron-left"></i> git and branch
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -618,6 +476,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -638,8 +500,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -716,6 +587,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分支的新建与合并"><span class="nav-number">1.</span> <span class="nav-text">分支的新建与合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支管理"><span class="nav-number">2.</span> <span class="nav-text">分支管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程分支"><span class="nav-number">3.</span> <span class="nav-text">远程分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -846,11 +733,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
