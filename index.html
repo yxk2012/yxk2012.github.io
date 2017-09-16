@@ -300,6 +300,291 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yxk2012.github.io/2017/09/16/组合数学之排列组合/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Morgan Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="结 绊">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/16/组合数学之排列组合/" itemprop="url">组合数学之排列组合</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-16T13:16:07+08:00">
+                2017-09-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!-- ## 排列组合 -->
+<h2 id="基本计数原理"><a href="#基本计数原理" class="headerlink" title="基本计数原理"></a>基本计数原理</h2><h3 id="加法与乘法原理"><a href="#加法与乘法原理" class="headerlink" title="加法与乘法原理"></a>加法与乘法原理</h3><ol>
+<li>加法原理： 集合中的子集是全集的划分，子集互不相交，子集的并集是全集。则全集元素个数为子集元素个数相加。</li>
+<li>乘法原理： 为加法原理推广，S为有序对(a,b)集合，其中a有p种选择，b有q种选择，则<strong>|s|=pq</strong> 。  </li>
+<li>选择顺序会影响乘法原理的使用。一个任务的完成分为若干子任务，如果某个完成子任务的途径<strong>不依赖</strong>于已经完成的任务，那么可以用乘法原理，否则不能。</li>
+</ol>
+<h3 id="计数方法-一一对应"><a href="#计数方法-一一对应" class="headerlink" title="计数方法-一一对应"></a>计数方法-一一对应</h3><ul>
+<li>A与B集合中元素一一对应，A集合计数困难，可以通过对B集合计数来求A集合中元素个数。</li>
+<li>Cayley定理：n个有标号的顶点的树的数目等于$n^{n-2}$。证明：1. n个顶点树的数目=序列$b<em>{1},b</em>{2},…b_{n-2}(0&lt;b\leqslant n )$的数目 2. 相应序列的数目为$n^{n-2}$。</li>
+</ul>
+<h2 id="排列组合问题"><a href="#排列组合问题" class="headerlink" title="排列组合问题"></a>排列组合问题</h2><ol>
+<li>无重排列：从n个不同元素中取r个不重复的元素，按次排列，排列的个数用P(n,r)表示。P(n,r)=n(n-1)(n-2)…(n-r+1)  </li>
+<li>无重组合：从n个不同元素中取r个不重复的元素组成一个子集（集合元素无顺序），从而不考虑其元素的顺序，组合的个数用C(n,r)或$\binom{n}{r}$。有C(n,r)·r!=P(n,r)</li>
+</ol>
+<h3 id="循环排列（圆周排列）"><a href="#循环排列（圆周排列）" class="headerlink" title="循环排列（圆周排列）"></a>循环排列（圆周排列）</h3><ol>
+<li>从n个不同的元素中取r个沿一个圆周排列，叫做循环排列，表示为Q(n,r),其中Q(n,r)=P(n,r)/r 。</li>
+<li>项链数：经翻转能与原来重合的排列视为同一排列。在圆排列的基础上计算，为圆排列的一半，n取r的项链数为P(n,r)/2r, r满足3≤r≤n。</li>
+</ol>
+<h3 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h3><ol>
+<li>组合的性质 $\binom{n}{r}=\binom{n}{n-r}$</li>
+<li>例子：第一种情况，假定有6个不同的元素，分成3组，第一组有1个元素，第二组有2个元素，第三组有3个元素，方案共有$C<em>{6}^{1}\cdot C</em>{5}^{2}\cdot C<em>{3}^{3}$种。第二种情况，假定有6个不同的元素，两两分成3组，方案共有$\frac{C</em>{6}^{2}\cdot C<em>{4}^{2}\cdot C</em>{2}^{2}}{3!}$ 种。由于三个组顺序无关，故需要除以3!。</li>
+</ol>
+<h2 id="多重集的排列和组合"><a href="#多重集的排列和组合" class="headerlink" title="多重集的排列和组合"></a>多重集的排列和组合</h2><ol>
+<li>集合s中有重复元素的情况，我们称S为一个多重集。如 S={a,a,a,b,c,c,c}={2a,1b,3c}。</li>
+<li>无限多重集S的r-排列：设多重集S中有k种不同的元素，每种元素的重复数是无穷的，记为$S={\infty a<em>{1},\infty a</em>{2},…,\infty a_{k}}$，则S的r-排列的个数为$k^{r}$（每个位置的选择都有k种）。</li>
+<li>有限多重集S的全排列：设多重集S有k种不同的元素，每种元素的重复数有限，记为$S={n<em>{1}a</em>{1},n<em>{2}a</em>{2},…,n<em>{k}a</em>{k}}$，设$n=n<em>{1}+n</em>{2}+…n<em>{k}$，那么S的n-排列或S的全排列个数为<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$\binom{n}{n</em>{1}}\binom{n-n<em>{1}}{n</em>{2}}\binom{n-n<em>{1}-n</em>{2}}{n<em>{3}}…\binom{n-n</em>{1}-n<em>{2}-…n</em>{k-1}}{n<em>{k}}=\frac{n!}{n</em>{1}!n<em>{2}!…n</em>{k}!}$。</li>
+<li>无限多重集S的r-组合： 设多重集S中有k种不同的元素，每种元素的重复数是无穷的，记为$S={\infty a<em>{1},\infty a</em>{2},…,\infty a<em>{k}}$， S的r-组合个数为<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$\binom{r+k-1}{r}=\binom{r+k-1}{k-1}$<br>S的r-组合指集合满足$x</em>{1}+x<em>{2}+…x</em>{k}=r$ 的集合${x<em>{1}a</em>{1},x<em>{2}a</em>{2},…,x<em>{k}a</em>{k}}$的个数。<ol>
+<li>该问题等价于求$x<em>{1}+x</em>{2}+…x_{k}=r$的非负整数解的个数。  </li>
+<li>上面的问题可以转化为求多重集$T={r\cdot 1,(k-1)\cdot \ast}$ 的全排列的个数。给定T的一个排列<br>&emsp;&emsp;&emsp;&emsp;&emsp;$11…1 \ast 11…1 \ast 11…1 \ast … \ast11…1$。<br>$x<em>{1}$代表第一个$\ast$之前1的数目，$x</em>{2}$代表第一个$\ast$与第二个$\ast$ 之间1的数目，一次类推，由上面可得S的r-组合个数。</li>
+</ol>
+</li>
+</ol>
+<h2 id="不相邻组合"><a href="#不相邻组合" class="headerlink" title="不相邻组合"></a>不相邻组合</h2><ul>
+<li>给定一个序列${1,2,3,…,n}$， 从中取r个元素做组合，组合中不得出现$i,i+1$两个相邻的数，其个数为<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$\binom{n-r-1}{r}=\binom{n-r-1}{n-1}$。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yxk2012.github.io/2017/08/31/git-高级用法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Morgan Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="结 绊">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/31/git-高级用法/" itemprop="url">git 高级用法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-31T10:56:20+08:00">
+                2017-08-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="rebase变基"><a href="#rebase变基" class="headerlink" title="rebase变基"></a>rebase变基</h2><ul>
+<li><p>总的原则是，只对尚未推送或分享给别人的本地修改执行变基操作清理历史，从不对已推送至别处的提交执行变基操作<br><img src="https://git-scm.com/book/en/v2/images/basic-rebase-3.png" alt="basic-rebase-3"></p>
+</li>
+<li><p>如上图所示，C4所在分支为experiment，执行</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git checkout experiment   #1</div><div class="line">git rebase master         #2  1,2可简写为 git rebase [basebranch] [topicbranch]</div><div class="line">git checkout master       #3</div><div class="line">git merge experiment      #4</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;变基原理是首先找到这两个分支（即当前分支 experiment、变基操作的目标基底分支 master）的最近共同祖先 C2，然后对比当前分支相对于该祖先的历次提交，提取相应的修改并存为临时文件，然后将当前分支指向目标基底 C3, 最后以此将之前另存为临时文件的修改依序应用。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/31/git-高级用法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://yxk2012.github.io/2017/08/30/git-and-branch-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -370,7 +655,7 @@
 
       
         
-          <p><img src="https://i.imgur.com/sDIkG8L.jpg" alt="branch2"></p>
+          <!-- ![branch2](https://i.imgur.com/sDIkG8L.jpg) -->
 <h2 id="分支的新建与合并"><a href="#分支的新建与合并" class="headerlink" title="分支的新建与合并"></a>分支的新建与合并</h2><ul>
 <li><code>git checkout -b [branchname]</code> 新建一分支的同时切换到那个分支。  </li>
 <li><code>git merge [branchname]</code> 合并分支，当<code>HEAD</code>在要合并的分支上游的分支时，Git 会采用Fast-forward，来简单的将指针向前推进，这种情况下没有需要解决的分歧，叫做”快进” 。  </li>
@@ -498,7 +783,7 @@
 
       
         
-          <p><img src="http://i.imgur.com/eKXvXFp.jpg" alt="brachhere"></p>
+          <!-- ![brachhere](http://i.imgur.com/eKXvXFp.jpg) -->
 <h2 id="brach-基础"><a href="#brach-基础" class="headerlink" title="brach 基础"></a>brach 基础</h2><ul>
 <li>Git所提交的对象(commit object)，包含一个指向暂存内容快照的指针，还有作者的姓名和邮箱，提交时输入的信息以及指向它父对象的指针。首次提交产生的提交对象没有父对象，普通提交操作产生的提交对象有一个父对象，多个分支合并产生的提交对象有多个父对象。当使用 git commit 进行提交操作时，Git 会先计算每一个子目录（本例中只有项目根目录）的校验和，然后在 Git 仓库中这些校验和保存为树对象。 随后，Git 便会创建一个提交对象，它除了包含上面提到的那些信息外，还包含指向这个树对象（项目根目录）的指针。<br>修改后再次提交：<br><img src="https://git-scm.com/book/en/v2/images/commits-and-parents.png" alt="commit-and-parents">
           <!--noindex-->
@@ -624,7 +909,7 @@
 
       
         
-          <p><img src="http://i.imgur.com/VxiaIEu.jpg" alt="祝天下有情人终成眷属"></p>
+          <!-- ![祝天下有情人终成眷属](http://i.imgur.com/VxiaIEu.jpg) -->
 <h2 id="Git-Before"><a href="#Git-Before" class="headerlink" title="Git Before"></a>Git Before</h2><ul>
 <li>git 有三种状态，分别为已提交（committed）、已修改（modified）和已暂存（staged）。</li>
 </ul>
@@ -632,7 +917,7 @@
 <p>已提交表示数据已经安全的保存在本地数据库中。 已修改表示修改了文件，但还没保存到数据库中。 已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。 </p>
 </blockquote>
 <ul>
-<li>初次运行git前配置用户信息。每一个git提交都会使用。<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git config --global user.name <span class="string">"John Doe"</span></span></div><div class="line"><span class="meta">$</span><span class="bash"> git config --global user.email johndoe@example.com</span></div></pre></td></tr></table></figure>
+<li>初次运行git前配置用户信息。每一个git提交都会使用。<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> git config --global user.name "John Doe"</div><div class="line"><span class="meta">$</span> git config --global user.email johndoe@example.com</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>&emsp;&emsp;<strong>Tips:</strong>–global 选项写入<code>~/.gitconfig</code> 或 <code>~/.config/git/config</code> 文件，如不加–global，在git仓库中运行时，会写入仓库中的config文件，即为<code>.git/config</code>，后面的内容会覆盖前面的内容。<br>&emsp;&emsp;<code>git config --list</code>会检查git配置信息<br>
@@ -759,7 +1044,7 @@
 
       
         
-          <p><img src="http://i.imgur.com/ci93fxo.jpg" alt="Imgur"></p>
+          <!-- ![Imgur](http://i.imgur.com/ci93fxo.jpg) -->
 <h2 id="notebook-基本操作"><a href="#notebook-基本操作" class="headerlink" title="notebook 基本操作"></a>notebook 基本操作</h2><ul>
 <li>在shell下键入<code>jupyter notebook</code>，启动notebook本地server。<br>&emsp;&emsp;<strong>Tips:</strong>shell 的当前路径会作为notebook中python语句的执行路径，建议选在自己的workspace，以缩短相对路径。  </li>
 <li><kbd>ctrl</kbd>+<kbd>enter</kbd> run cell 执行当前格。<br><kbd>shift</kbd>+<kbd>enter</kbd> run cell,select next  执行当前格并选中下一格。<br><kbd>alt</kbd>+<kbd>enter</kbd> run cell, insert below  执行当前格，并在下插入一格。
@@ -886,7 +1171,7 @@
 
       
         
-          <p><img src="https://i.imgur.com/mXM5C5d.jpg" alt="imgur"></p>
+          <!-- ![imgur](https://i.imgur.com/mXM5C5d.jpg) -->
 <h2 id="将A计算机上的博客部署到git"><a href="#将A计算机上的博客部署到git" class="headerlink" title="将A计算机上的博客部署到git"></a>将A计算机上的博客部署到git</h2><p>一、 注册oschina账号，在其gitee上建立一个新的私有repo。<br>二、 在A计算机，已经部署好的hexo博客根目录下删除原有的.git文件夹，包括子目录下的.git文件夹也一并删除。<br>三、 修改hexo博客根目录下本已存在的.gitignore文件，在其中加入如下内容。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/.deploy_git</div><div class="line">/public  </div><div class="line">/_config.yml</div></pre></td></tr></table></figure></p>
 <p>&emsp;&emsp;其中<code>_config.yml</code>可以加入也可以不加入，此处考虑安全原因，建议使用其他方法将该文件同步。<br>
           <!--noindex-->
@@ -1347,7 +1632,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1360,7 +1645,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

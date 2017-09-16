@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="git," />
 
 
 
@@ -94,16 +94,21 @@
 
 
 
-<meta name="description" content="世祖四年生于雁门郡">
-<meta property="og:type" content="website">
-<meta property="og:title" content="结 绊">
-<meta property="og:url" content="https://yxk2012.github.io/tags/sublime/index.html">
+<meta name="description" content="rebase变基 总的原则是，只对尚未推送或分享给别人的本地修改执行变基操作清理历史，从不对已推送至别处的提交执行变基操作  如上图所示，C4所在分支为experiment，执行   1234git checkout experiment   #1git rebase master         #2  1,2可简写为 git rebase [basebranch] [topicbranch]g">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 高级用法">
+<meta property="og:url" content="https://yxk2012.github.io/2017/08/31/git-高级用法/index.html">
 <meta property="og:site_name" content="结 绊">
-<meta property="og:description" content="世祖四年生于雁门郡">
+<meta property="og:description" content="rebase变基 总的原则是，只对尚未推送或分享给别人的本地修改执行变基操作清理历史，从不对已推送至别处的提交执行变基操作  如上图所示，C4所在分支为experiment，执行   1234git checkout experiment   #1git rebase master         #2  1,2可简写为 git rebase [basebranch] [topicbranch]g">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://git-scm.com/book/en/v2/images/basic-rebase-3.png">
+<meta property="og:image" content="https://git-scm.com/book/en/v2/images/interesting-rebase-2.png">
+<meta property="og:updated_time" content="2017-09-07T12:58:08.032Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="结 绊">
-<meta name="twitter:description" content="世祖四年生于雁门郡">
+<meta name="twitter:title" content="git 高级用法">
+<meta name="twitter:description" content="rebase变基 总的原则是，只对尚未推送或分享给别人的本地修改执行变基操作清理历史，从不对已推送至别处的提交执行变基操作  如上图所示，C4所在分支为experiment，执行   1234git checkout experiment   #1git rebase master         #2  1,2可简写为 git rebase [basebranch] [topicbranch]g">
+<meta name="twitter:image" content="https://git-scm.com/book/en/v2/images/basic-rebase-3.png">
 
 
 
@@ -132,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="https://yxk2012.github.io/tags/sublime/"/>
+  <link rel="canonical" href="https://yxk2012.github.io/2017/08/31/git-高级用法/"/>
 
 
 
 
 
-  <title>标签: sublime | 结 绊</title>
+  <title>git 高级用法 | 结 绊</title>
   
 
 
@@ -166,7 +171,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -284,54 +289,272 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>sublime<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yxk2012.github.io/2017/08/31/git-高级用法/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Morgan Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="结 绊">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/08/27/markdown与sublime-text-3/" itemprop="url">
-              
-                <span itemprop="name">markdown与sublime text 3</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">git 高级用法</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-27T14:52:09+08:00"
-              content="2017-08-27" >
-          08-27
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-31T10:56:20+08:00">
+                2017-08-31
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="rebase变基"><a href="#rebase变基" class="headerlink" title="rebase变基"></a>rebase变基</h2><ul>
+<li><p>总的原则是，只对尚未推送或分享给别人的本地修改执行变基操作清理历史，从不对已推送至别处的提交执行变基操作<br><img src="https://git-scm.com/book/en/v2/images/basic-rebase-3.png" alt="basic-rebase-3"></p>
+</li>
+<li><p>如上图所示，C4所在分支为experiment，执行</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git checkout experiment   #1</div><div class="line">git rebase master         #2  1,2可简写为 git rebase [basebranch] [topicbranch]</div><div class="line">git checkout master       #3</div><div class="line">git merge experiment      #4</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;变基原理是首先找到这两个分支（即当前分支 experiment、变基操作的目标基底分支 master）的最近共同祖先 C2，然后对比当前分支相对于该祖先的历次提交，提取相应的修改并存为临时文件，然后将当前分支指向目标基底 C3, 最后以此将之前另存为临时文件的修改依序应用。<br><a id="more"></a><br>&emsp;&emsp;3,4两条命令回到master分支，进行Fast-Forward。此时最终结果与merge中快照相同，最终结果没有区别。尽管开发过程是并行的，但其历史记录是串行的。这样可以在向远程分支推送时保持提交历史的整洁。<br>&emsp;&emsp;无论是通过变基还是三方合并，最终结果所指向的快照始终是一样的，只不过提交历史不同罢了。 变基是将一系列提交按照原有次序依次应用到另一分支上，而合并是把最终结果合在一起。</p>
+<ul>
+<li><code>git rebase --onto master server client</code> 意为：</li>
+</ul>
+<blockquote>
+<p>取出 client 分支，找出处于 client 分支和 server 分支的共同祖先之后的修改，然后把它们在 master 分支上重放一遍</p>
+</blockquote>
+<p><img src="https://git-scm.com/book/en/v2/images/interesting-rebase-2.png" alt=""></p>
+<h2 id="交互式暂存"><a href="#交互式暂存" class="headerlink" title="交互式暂存"></a>交互式暂存</h2><ul>
+<li><code>git add -i</code>或<code>git add -interactive</code> 开启交互式终端模式，具体操作参考提示。</li>
+<li>在交互式模式中输入5可以进入暂存补丁模式，可以挑选并将文件的一部分修改暂存。其中输入<code>?</code>可以显示所有可以用的命令列表。  </li>
+<li><code>git add -p</code>或<code>git add -patch</code> 也可以用于做部分文件暂存。</li>
+</ul>
+<h2 id="储藏与清理"><a href="#储藏与清理" class="headerlink" title="储藏与清理"></a>储藏与清理</h2><ul>
+<li><code>git stash</code> 用于在不做一次提交的情况下保存状态。</li>
+</ul>
+<blockquote>
+<p>储藏会处理工作目录的脏的状态 - 即，修改的跟踪文件与暂存改动 - 然后将未完成的修改保存到一个栈上，而你可以在任何时候重新应用这些改动。</p>
+</blockquote>
+<ul>
+<li><code>git stash list</code> 显示存储在栈上的储藏列表。</li>
+<li><code>git stash apply</code> 应用最近的一个储藏，如<code>git stash apply stash@{1}</code> 则会应用到指定储藏。</li>
+<li><code>git stash pop</code> 应用储藏并从栈中丢弃。等于<code>git stash apply</code>+<code>git stash drop</code>，其中，<code>drop</code>命令也可以指定要丢弃的储藏。</li>
+<li><code>git stash --keep-index</code>用于告知git不储藏已经暂存的部分。</li>
+<li><code>git stash -u</code>或<code>git stash --include-untracked</code>可以储藏任何创建的未跟踪文件。</li>
+<li><code>git stash --patch</code>可以交互式提示将哪些改动储藏，哪些改动保存在工作目录。</li>
+<li>采用<code>git stash branch [testchanges]</code> 检出储藏工作时所在的提交，重新在那应用工作，然后在应用成功后扔掉储藏,这是在新分支轻松恢复储藏工作并继续工作的一个很不错的途径。</li>
+<li><code>git clean</code> 默认从工作目录中移除没有忽略的未跟踪文件，<code>git clean -f -d</code> 移除工作目录中所有未追踪的文件以及空的子目录。 <code>-f</code>意味着强制移除。<code>git clean -d -n</code>做一次演习然后告诉你 将要移除什么。<code>-x</code>除未跟踪文件外，移除<code>.gitignore</code>中的文件。<strong>建议在<code>git clean</code>时先用<code>-n</code>参数查看，另一种方式是用<code>-i</code>来交互式运行</strong></li>
+<li><code>git stash --all</code>可以将所有文件移除并放入栈中。<!-- 上面这句话存疑 -->
+</li>
+</ul>
+<h2 id="重置"><a href="#重置" class="headerlink" title="重置"></a>重置</h2><ul>
+<li><p>Git作为内容管理器，其框架为三棵不同的树（文件集合）。</p>
+<p>  |树               |           用途                     |<br>  |:—————:|:———————————–|<br>  |HEAD             |上一次提交的快照，下一次提交的父结点|<br>  |Index            |预期的下一次提交的快照              |<br>  |Working Directory|沙盒                                |</p>
+</li>
+<li><p>除工作目录，另两棵树以一种高效但不直观的方式，将内容存储在.git文件夹中。 工作目录会将它们解包为实际的文件以便编辑。<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86" target="_blank" rel="external">git 的具体工作原理图解</a></p>
+<!-- TODO 3.6,7.2,7.3,7.7 -->
+</li>
+</ul>
+<blockquote>
+<p>当检出一个分支时，它会修改 <strong>HEAD</strong> 指向新的分支引用，将 <strong>索引</strong> 填充为该次提交的快照，然后将 <strong>索引 </strong>的内容复制到 <strong>工作目录</strong> 中。</p>
+</blockquote>
+<ul>
+<li><p><code>git reset</code>所带的三种参数<code>--soft</code>，<code>--mixed</code>，<strong><code>--hard</code></strong><br>  1.移动 HEAD 分支的指向 （若指定了 –soft，则到此停止）。<br>  2.使索引看起来像 HEAD （若未指定 –hard，则到此停止）。<br>  3.使工作目录看起来像索引（指定–hard，<strong>此操作强制覆盖工作目录</strong><br>  具体见上方链接中图。</p>
+</li>
+<li><p><code>git reset [somefile]</code>等于<code>git reset --mixed HEAD [somefile]</code>，本质为将somefile复制到Index。此操作与<code>git add [somefile]</code>正好相反。</p>
+</li>
+<li><p><code>git reset [7bit_hash] -- [somefile]</code> 指定从某一个具体的提交拉取文件对应版本到工作目录。此时再运行<code>git add</code>添加该文件，相当于记录了一条将文件恢复到过去版本的更改，而实际上该更改并没有在工作目录中应用。</p>
+</li>
+<li><code>git reset</code>也接受<code>--patch</code>来一块一块取消暂存内容。</li>
+<li>通过<code>git reset --soft HEAD~2</code>来将HEAD分支移动到旧一点的提交上，然后在运行<code>git commit</code>可以实现压缩提交，中间暂时的提交历史就不存在了。</li>
+</ul>
+<h2 id="速查列表"><a href="#速查列表" class="headerlink" title="速查列表"></a>速查列表</h2><p>HEAD” 一列中的 “REF” 表示该命令移动了 HEAD 指向的分支引用，而`‘HEAD’’ 则表示只移动了 HEAD 自身。 特别注意 WD Safe? 一列 - 如果它标记为 NO，那么运行该命令之前请考虑一下。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">HEAD</th>
+<th style="text-align:center">Index</th>
+<th style="text-align:center">Workdir</th>
+<th style="text-align:left">WD Safe?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Commit Level</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">reset –soft [commit]</td>
+<td style="text-align:center">REF</td>
+<td style="text-align:center">NO</td>
+<td style="text-align:center">NO</td>
+<td style="text-align:left">YES</td>
+</tr>
+<tr>
+<td style="text-align:center">reset [commit]</td>
+<td style="text-align:center">REF</td>
+<td style="text-align:center">YES</td>
+<td style="text-align:center">NO</td>
+<td style="text-align:left">YES</td>
+</tr>
+<tr>
+<td style="text-align:center">reset –hard [commit]</td>
+<td style="text-align:center">REF</td>
+<td style="text-align:center">YES</td>
+<td style="text-align:center">YES</td>
+<td style="text-align:left">NO</td>
+</tr>
+<tr>
+<td style="text-align:center">checkout [commit]</td>
+<td style="text-align:center">HEAD</td>
+<td style="text-align:center">YES</td>
+<td style="text-align:center">YES</td>
+<td style="text-align:left">YES</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>File Level</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">reset (commit) [file]</td>
+<td style="text-align:center">NO</td>
+<td style="text-align:center">YES</td>
+<td style="text-align:center">NO</td>
+<td style="text-align:left">YES</td>
+</tr>
+<tr>
+<td style="text-align:center">checkout (commit) [file]</td>
+<td style="text-align:center">NO</td>
+<td style="text-align:center">YES</td>
+<td style="text-align:center">YES</td>
+<td style="text-align:left">NO</td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1]Chacon S, Straub B. Pro git[M]. Apress, 2014. </p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/30/git-and-branch-2/" rel="next" title="git and branch 二">
+                <i class="fa fa-chevron-left"></i> git and branch 二
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/16/组合数学之排列组合/" rel="prev" title="组合数学之排列组合">
+                组合数学之排列组合 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -339,6 +562,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -359,8 +586,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -437,6 +673,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#rebase变基"><span class="nav-number">1.</span> <span class="nav-text">rebase变基</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交互式暂存"><span class="nav-number">2.</span> <span class="nav-text">交互式暂存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#储藏与清理"><span class="nav-number">3.</span> <span class="nav-text">储藏与清理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重置"><span class="nav-number">4.</span> <span class="nav-text">重置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#速查列表"><span class="nav-number">5.</span> <span class="nav-text">速查列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">6.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -567,10 +819,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
