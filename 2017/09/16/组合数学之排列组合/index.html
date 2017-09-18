@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="结 绊">
 <meta property="og:description" content="基本计数原理加法与乘法原理 加法原理： 集合中的子集是全集的划分，子集互不相交，子集的并集是全集。则全集元素个数为子集元素个数相加。 乘法原理： 为加法原理推广，S为有序对(a,b)集合，其中a有p种选择，b有q种选择，则|s|=pq 。   选择顺序会影响乘法原理的使用。一个任务的完成分为若干子任务，如果某个完成子任务的途径不依赖于已经完成的任务，那么可以用乘法原理，否则不能。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-16T13:58:03.281Z">
+<meta property="og:updated_time" content="2017-09-17T12:06:51.994Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组合数学之排列组合">
 <meta name="twitter:description" content="基本计数原理加法与乘法原理 加法原理： 集合中的子集是全集的划分，子集互不相交，子集的并集是全集。则全集元素个数为子集元素个数相加。 乘法原理： 为加法原理推广，S为有序对(a,b)集合，其中a有p种选择，b有q种选择，则|s|=pq 。   选择顺序会影响乘法原理的使用。一个任务的完成分为若干子任务，如果某个完成子任务的途径不依赖于已经完成的任务，那么可以用乘法原理，否则不能。">
@@ -393,15 +393,15 @@
 <h2 id="多重集的排列和组合"><a href="#多重集的排列和组合" class="headerlink" title="多重集的排列和组合"></a>多重集的排列和组合</h2><ol>
 <li>集合s中有重复元素的情况，我们称S为一个多重集。如 S={a,a,a,b,c,c,c}={2a,1b,3c}。</li>
 <li>无限多重集S的r-排列：设多重集S中有k种不同的元素，每种元素的重复数是无穷的，记为$S={\infty a_{1},\infty a_{2},…,\infty a_{k}}$，则S的r-排列的个数为$k^{r}$（每个位置的选择都有k种）。</li>
-<li>有限多重集S的全排列：设多重集S有k种不同的元素，每种元素的重复数有限，记为$S={n_{1}a_{1},n_{2}a_{2},…,n_{k}a_{k}}$，设$n=n_{1}+n_{2}+…n_{k}$，那么S的n-排列或S的全排列个数为<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$\binom{n}{n_{1}}\binom{n-n_{1}}{n_{2}}\binom{n-n_{1}-n_{2}}{n_{3}}…\binom{n-n_{1}-n_{2}-…n_{k-1}}{n_{k}}=\frac{n!}{n_{1}!n_{2}!…n_{k}!}$。</li>
-<li>无限多重集S的r-组合： 设多重集S中有k种不同的元素，每种元素的重复数是无穷的，记为$S={\infty a_{1},\infty a_{2},…,\infty a_{k}}$， S的r-组合个数为<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$\binom{r+k-1}{r}=\binom{r+k-1}{k-1}$<br>S的r-组合指集合满足$x_{1}+x_{2}+…x_{k}=r$ 的集合${x_{1}a_{1},x_{2}a_{2},…,x_{k}a_{k}}$的个数。<ol>
+<li>有限多重集S的全排列：设多重集S有k种不同的元素，每种元素的重复数有限，记为$S={n_{1}a_{1},n_{2}a_{2},…,n_{k}a_{k}}$，设$n=n_{1}+n_{2}+…n_{k}$，那么S的n-排列或S的全排列个数为<br>$$\binom{n}{n_{1}}\binom{n-n_{1}}{n_{2}}\binom{n-n_{1}-n_{2}}{n_{3}}…\binom{n-n_{1}-n_{2}-…n_{k-1}}{n_{k}}=\frac{n!}{n_{1}!n_{2}!…n_{k}!}$$ 。</li>
+<li>无限多重集S的r-组合： 设多重集S中有k种不同的元素，每种元素的重复数是无穷的，记为$S={\infty a_{1},\infty a_{2},…,\infty a_{k}}$， S的r-组合个数为<br>$$\binom{r+k-1}{r}=\binom{r+k-1}{k-1}$$<br>S的r-组合指集合满足$x_{1}+x_{2}+…x_{k}=r$ 的集合${x_{1}a_{1},x_{2}a_{2},…,x_{k}a_{k}}$的个数。<ol>
 <li>该问题等价于求$x_{1}+x_{2}+…x_{k}=r$的非负整数解的个数。  </li>
-<li>上面的问题可以转化为求多重集$T={r\cdot 1,(k-1)\cdot \ast}$ 的全排列的个数。给定T的一个排列<br>&emsp;&emsp;&emsp;&emsp;&emsp;$11…1 \ast 11…1 \ast 11…1 \ast … \ast11…1$。<br>$x_{1}$ 代表第一个 $\ast$ 之前1的数目，$x_{2}$代表第一个$\ast$与第二个$\ast$ 之间1的数目，一次类推，由上面可得S的r-组合个数。</li>
+<li>上面的问题可以转化为求多重集$T={r\cdot 1,(k-1)\cdot \ast}$ 的全排列的个数。给定T的一个排列<br>$$11…1 \ast 11…1 \ast 11…1 \ast … \ast11…1$$<br>$x_{1}$ 代表第一个 $\ast$ 之前1的数目，$x_{2}$代表第一个$\ast$与第二个$\ast$ 之间1的数目，一次类推，由上面可得S的r-组合个数。</li>
 </ol>
 </li>
 </ol>
 <h2 id="不相邻组合"><a href="#不相邻组合" class="headerlink" title="不相邻组合"></a>不相邻组合</h2><ul>
-<li>给定一个序列${1,2,3,…,n}$， 从中取r个元素做组合，组合中不得出现$i,i+1$两个相邻的数，其个数为<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$\binom{n-r-1}{r}=\binom{n-r-1}{n-1}$。</li>
+<li>给定一个序列${1,2,3,…,n}$， 从中取r个元素做组合，组合中不得出现$i,i+1$两个相邻的数，其个数为<br>$$\binom{n-r-1}{r}=\binom{n-r-1}{n-1}$$</li>
 </ul>
 
       
@@ -442,6 +442,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/18/游戏关卡设计/" rel="prev" title="游戏关卡设计与玩家心理">
+                游戏关卡设计与玩家心理 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -531,7 +535,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
