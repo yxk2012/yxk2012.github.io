@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yxk2012.github.io/2017/09/20/WeGame%E4%B8%8ESteam%E5%9C%A8%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%91%E5%B1%95/</loc>
+    <loc>https://yxk2012.github.io/2017/09/24/%E6%B8%B8%E6%88%8F%E6%95%B0%E5%80%BC%E8%AE%BE%E8%AE%A1/</loc>
     
-    <lastmod>2017-09-20T15:43:00.728Z</lastmod>
+    <lastmod>2017-09-24T13:56:32.408Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yxk2012.github.io/2017/08/31/git-%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</loc>
+    
+    <lastmod>2017-09-24T03:18:08.888Z</lastmod>
     
   </url>
   
@@ -30,21 +37,14 @@
   </url>
   
   <url>
-    <loc>https://yxk2012.github.io/2017/08/28/git-and-based/</loc>
-    
-    <lastmod>2017-09-07T12:58:08.032Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yxk2012.github.io/2017/08/31/git-%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</loc>
-    
-    <lastmod>2017-09-07T12:58:08.032Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://yxk2012.github.io/2017/08/28/Jupyter-Notebook%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2017-09-07T12:58:08.032Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yxk2012.github.io/2017/08/28/git-and-based/</loc>
     
     <lastmod>2017-09-07T12:58:08.032Z</lastmod>
     

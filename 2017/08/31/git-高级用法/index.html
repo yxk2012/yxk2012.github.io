@@ -104,7 +104,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/basic-rebase-3.png">
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/interesting-rebase-2.png">
-<meta property="og:updated_time" content="2017-09-07T12:58:08.032Z">
+<meta property="og:updated_time" content="2017-09-24T03:18:08.888Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 高级用法">
 <meta name="twitter:description" content="rebase变基 总的原则是，只对尚未推送或分享给别人的本地修改执行变基操作清理历史，从不对已推送至别处的提交执行变基操作  如上图所示，C4所在分支为experiment，执行   1234git checkout experiment   #1git rebase master         #2  1,2可简写为 git rebase [basebranch] [topicbranch]g">
@@ -409,11 +409,32 @@
 </li>
 </ul>
 <h2 id="重置"><a href="#重置" class="headerlink" title="重置"></a>重置</h2><ul>
-<li><p>Git作为内容管理器，其框架为三棵不同的树（文件集合）。</p>
-<p>  |树               |           用途                     |<br>  |:—————:|:———————————–|<br>  |HEAD             |上一次提交的快照，下一次提交的父结点|<br>  |Index            |预期的下一次提交的快照              |<br>  |Working Directory|沙盒                                |</p>
-</li>
-<li><p>除工作目录，另两棵树以一种高效但不直观的方式，将内容存储在.git文件夹中。 工作目录会将它们解包为实际的文件以便编辑。<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86" target="_blank" rel="external">git 的具体工作原理图解</a></p>
-<!-- TODO 3.6,7.2,7.3,7.7 -->
+<li>Git作为内容管理器，其框架为三棵不同的树（文件集合）。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">树</th>
+<th style="text-align:center">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">HEAD</td>
+<td style="text-align:center">上一次提交的快照，下一次提交的父结点</td>
+</tr>
+<tr>
+<td style="text-align:center">Index</td>
+<td style="text-align:center">预期的下一次提交的快照</td>
+</tr>
+<tr>
+<td style="text-align:center">Working Directory</td>
+<td style="text-align:center">沙盒</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>除工作目录，另两棵树以一种高效但不直观的方式，将内容存储在.git文件夹中。 工作目录会将它们解包为实际的文件以便编辑。<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86" target="_blank" rel="external">git 的具体工作原理图解</a><!-- TODO 3.6,7.2,7.3,7.7 -->
 </li>
 </ul>
 <blockquote>
