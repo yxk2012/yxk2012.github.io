@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="结 绊">
 <meta property="og:description" content="职业基础属性设计基础属性一级属性：不直接参与战斗的人物属性，可以通过升级或加点的方式获得。二级属性：一般情况下自身无法成长，需要依附一级属性成长或是装备或其他系统加成的属性。常见MMORPG的一级属性有：   - 力量（物理攻击力，物理防御力，生命值） - 智力（魔法攻击力，魔法防御力，魔法值） - 敏捷（命中，闪避） - 精神（暴击，抗暴击） - 体质（生命值，物防，魔放）   二级属性：生命值">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-24T13:56:32.408Z">
+<meta property="og:updated_time" content="2017-09-24T14:33:40.163Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="游戏数值设计">
 <meta name="twitter:description" content="职业基础属性设计基础属性一级属性：不直接参与战斗的人物属性，可以通过升级或加点的方式获得。二级属性：一般情况下自身无法成长，需要依附一级属性成长或是装备或其他系统加成的属性。常见MMORPG的一级属性有：   - 力量（物理攻击力，物理防御力，生命值） - 智力（魔法攻击力，魔法防御力，魔法值） - 敏捷（命中，闪避） - 精神（暴击，抗暴击） - 体质（生命值，物防，魔放）   二级属性：生命值">
@@ -534,11 +534,36 @@
 </li>
 </ul>
 <h2 id="战斗公式设计"><a href="#战斗公式设计" class="headerlink" title="战斗公式设计"></a>战斗公式设计</h2><h3 id="战斗流程"><a href="#战斗流程" class="headerlink" title="战斗流程"></a>战斗流程</h3><ul>
-<li><p>一次典型的近战模式攻击：前摇(0.5s)→完成结算（瞬间）→后摇(0.5s)<br>CD计算方式有三种，其不同如下表：<br>假设冷却时间为1s</p>
-<p>|结算时间|单位CD时间|每分钟攻击次数|<br>|:——:|:———|:————-|<br>|前摇前  |=0.5+0.5+1|=60/2=30      |<br>|前摇后  |=0.5+1    |=60/1.5=40    |<br>|后摇后  |=1        |=60/1=60      |</p>
-</li>
-<li><p>一次典型的远程模式攻击：法师使用火球（飞行时间不可控），一般远程攻击在触碰到目标时候才计算战斗公式。</p>
-</li>
+<li>一次典型的近战模式攻击：前摇(0.5s)→完成结算（瞬间）→后摇(0.5s)<br>CD计算方式有三种，其不同如下表：<br>假设冷却时间为1s</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">结算时间</th>
+<th style="text-align:left">单位CD时间</th>
+<th style="text-align:left">每分钟攻击次数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">前摇前</td>
+<td style="text-align:left">=0.5+0.5+1</td>
+<td style="text-align:left">=60/2=30</td>
+</tr>
+<tr>
+<td style="text-align:center">前摇后</td>
+<td style="text-align:left">=0.5+1</td>
+<td style="text-align:left">=60/1.5=40</td>
+</tr>
+<tr>
+<td style="text-align:center">后摇后</td>
+<td style="text-align:left">=1</td>
+<td style="text-align:left">=60/1=60</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>一次典型的远程模式攻击：法师使用火球（飞行时间不可控），一般远程攻击在触碰到目标时候才计算战斗公式。</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">前摇时间 +---&gt;+---&gt; 火球飞行时间 +------&gt;完成结算（瞬间）</div><div class="line">             |                 |</div><div class="line">             |                 |</div><div class="line">             +---&gt;   后摇时间   +</div></pre></td></tr></table></figure>
 <ul>
